@@ -2,10 +2,11 @@ pipeline {
   agent { label 'miniserver' }
 
   environment {
-    REGISTRY_URL  = 'nexus.server.cranie.com'
-    REGISTRY_REPO = 'docker'
-    REMOTE_REPO   = 'https://github.com/ntoporcov/iQbit.git'
-    CODE_NAME     = 'iqbit'
+    REGISTRY_URL         = 'nexus.server.cranie.com'
+    REGISTRY_REPO        = 'docker'
+    REMOTE_REPO          = 'https://github.com/ntoporcov/iQbit.git'
+    REMOTE_REPO_BRANCH   = 'master'
+    CODE_NAME            = 'iqbit'
   }
 
   triggers {
@@ -21,7 +22,7 @@ pipeline {
     stage('Clone Repo') {
       steps {
         dir("${CODE_NAME}") {
-          git url: "${REMOTE_REPO}", branch: 'main'
+          git url: "${REMOTE_REPO}", branch: "${REMOTE_REPO_BRANCH}"
         }
       }
     }
