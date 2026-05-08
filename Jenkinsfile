@@ -4,7 +4,7 @@ pipeline {
   environment {
     REGISTRY_URL  = 'nexus.server.cranie.com'
     REGISTRY_REPO = 'docker'
-    REMOTE_REPO   = 'https://github.com/ntoporcov/iQbit/tree/master'
+    REMOTE_REPO   = 'https://github.com/ntoporcov/iQbit.git'
     CODE_NAME     = 'iqbit'
   }
 
