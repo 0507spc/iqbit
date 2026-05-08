@@ -87,12 +87,12 @@ pipeline {
     }
 
 
-    stage('Deploy') {
-        steps {
-            // SSH command to deploy
-            sh 'ssh nas "cd /volume2/docker/${CODE_NAME} ; sudo docker compose pull ; sudo docker compose up -d"'
-        }
-    }
+   // stage('Deploy') {
+   //     steps {
+   //         // SSH command to deploy
+   //         sh 'ssh nas "cd /volume2/docker/${CODE_NAME} ; sudo docker compose pull ; sudo docker compose up -d"'
+   //     }
+   // }
 
 
 
